@@ -1,6 +1,7 @@
 /**
  * Created by alvaromartinez on 17/09/15.
  */
+var i = 0;
 
 
 $(document).on('click','#bt-submit',function example(){
@@ -24,4 +25,9 @@ $(document).on('click','#bt-submit',function example(){
         }
 
     });
+});
+
+$(document).on('click','#bt-dom',function example2(){
+    i++;
+    $("#dom_01").text("Cambio de valor "+i);
 });
