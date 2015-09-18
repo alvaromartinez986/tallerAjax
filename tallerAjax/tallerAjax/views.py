@@ -6,4 +6,15 @@ from django.http import HttpResponseRedirect
 
 
 def index(request):
-    return render(request,'index.html',{})
+    return render(request,'index.html',{
+        'titulo': 'Titulo inicial'
+    })
+
+
+def change_div(request):
+    if request.method == 'POST':
+        text = request.POST['example_01']
+        return render(request,'titulo.html',{
+            'titulo': text
+        })
+
